@@ -3,16 +3,30 @@ import "./ProductDetail.css"
 import { Carousel, } from 'antd';
 import { Rating } from 'semantic-ui-react'
 
-export function ProductDetail () {
-      
-  function onChange(a, b, c) {
+class ProductDetail extends React.Component {
+  
+   averageRating = (arr) => {
+
+    console.log(arr)
+    let total =0
+    for (let i=0; i< arr.length; i++){
+      total += arr[i]
+    }
+    return Math.ceil(total/arr.length)
+}
+
+   onChange = (a, b, c) => {
         console.log(a, b, c);
       }
-        return (
-        
+
+      render () {
+        const avgRating = this.averageRating(this.props.ratings)
+  return (
+
+    
         <div id ="wholeThing">
         <div id="pictureBox">
-         <Carousel afterChange={onChange}>
+         <Carousel afterChange={this.onChange}>
           <div className ="slide">
           <img src="https://cdn.thingiverse.com/assets/bd/99/61/67/40/featured_preview_fussleiste_innere_ecke_90.stl" alt="preview_fussleite"></img>
           
@@ -30,12 +44,14 @@ export function ProductDetail () {
       </Carousel>
         </div>
         <div id="description">
-          <h2>Design Title</h2>
-          <h3>Author/Date</h3>
-          <p>Product description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <Rating icon='star' defaultRating={4} maxRating={5} disabled/>
-          <span>Rating</span>
+        <h2>{this.props.name}</h2>
+        <p>{this.props.description}</p>
+          <Rating icon='star' defaultRating={avgRating} maxRating={5} disabled/>
+          <span>{this.props.ratingsCount} ratings</span>
         </div>
         </div>
       );
 }
+}
+
+export default ProductDetail

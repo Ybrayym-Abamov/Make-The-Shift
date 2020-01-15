@@ -2,6 +2,7 @@ import React from "react";
 import { getAllProducts } from "../../redux/actionCreators";
 import { connect } from "react-redux";
 import { MenuBody, ProductCard } from "../components/index.js";
+import "./Home.css";
 
 class Home extends React.Component {
   constructor(props) {
@@ -50,17 +51,13 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <MenuBody />
-        <h3>Most Popular</h3>
-        <div className="Home-mostPopular">
-          {topFour.map(product => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              name={product.productName}
-              description={product.productDescription}
-              imgs={product.productImgs}
-            />
-          ))}
+        <div className="popular-wrapper">
+          <h3 className="popular__heading">Most Popular</h3>
+          <div className="Home-mostPopular">
+            {topFour.map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
         </div>
       </React.Fragment>
     );

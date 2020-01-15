@@ -1,0 +1,16 @@
+/* block */
+
+.ui.card {
+  margin: 1em 1em;
+  height: 350px;
+}
+
+/* element */
+
+.ui.card > .image {
+  background: none;
+}
+
+.ui.card:first-child {
+  margin-top: 1em;
+}

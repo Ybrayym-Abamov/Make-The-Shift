@@ -1,6 +1,7 @@
 /*layout*/
 .links-wrapper {
   display: flex;
+  align-items: center;
   margin-left: 3.5em;
 }
 

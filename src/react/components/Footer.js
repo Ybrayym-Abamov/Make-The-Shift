@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Footer.css";
-import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
-import { faCopyright } from "@fontawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 
 class Footer extends Component {
   render() {

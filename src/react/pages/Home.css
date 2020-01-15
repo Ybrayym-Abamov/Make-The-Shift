@@ -1,0 +1,38 @@
+/* Layout */
+.popular-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Home-mostPopular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+/* Element */
+h3.popular__heading {
+  margin-top: 2em;
+}
+
+/***********************/
+/* Styling for Desktop */
+
+@media only screen and (min-width: 601px) {
+  /* Layout */
+  .popular-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .Home-mostPopular {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 2em;
+  }
+}

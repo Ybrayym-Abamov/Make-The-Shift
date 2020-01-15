@@ -6,8 +6,26 @@
 } */
 
 .ui.sidebar {
-    z-index: -5 !important;
+  z-index: -5 !important;
 }
 /* .ui.inverted.vertical.labeled.icon.ui.overlay.left.thin.visible.sidebar.menu{
     postiion: sticky;
 } */
+
+/* block */
+.ui.labeled.icon.menu {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.ui.thin.left.sidebar {
+  width: 170px;
+}
+
+.ui.radio.checkbox {
+  min-height: 25px;
+}
+
+.ui.checkbox {
+  min-height: 25px;
+}

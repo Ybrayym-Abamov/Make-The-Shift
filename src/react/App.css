@@ -22,6 +22,12 @@ content is shorter than height of screen */
 }
 
 /* block */
+.app__header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .app__footer {
   margin-top: auto;
 }

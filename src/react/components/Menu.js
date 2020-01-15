@@ -2,7 +2,8 @@ import React from "react";
 import { Menu } from "semantic-ui-react";
 import SearchBar from "./Search.js";
 import "./Menu.css";
-import { Link } from "react-router-dom";
+import {Link} from 'react-router-dom'
+
 
 class MyMenu extends React.Component {
   state = {};
@@ -14,27 +15,27 @@ class MyMenu extends React.Component {
 
     return (
       <Menu className="mainMenu">
-        <div className="links-wrapper">
-          <Link to="/category">
-            <Menu.Item
-              name="CATALOG"
-              active={activeItem === "CATALOG"}
-              onClick={this.handleItemClick}
-            >
-              CATALOG
-            </Menu.Item>
-          </Link>
+        
+        <Link to='/category'>
+          
+        <Menu.Item
+          name="CATALOG"
+          active={activeItem === "CATALOG"}
+          onClick={this.handleItemClick}
+        >
+          CATALOG
+        </Menu.Item>
+        </Link>
 
-          <Link to="/">
-            <Menu.Item
-              name="HOME"
-              active={activeItem === "HOME"}
-              onClick={this.handleItemClick}
-            >
-              HOME
-            </Menu.Item>
-          </Link>
-        </div>
+        <Link to='/'>
+        <Menu.Item
+          name="HOME"
+          active={activeItem === "HOME"}
+          onClick={this.handleItemClick}
+          >
+          HOME
+        </Menu.Item>
+        </Link>
 
         <SearchBar />
         <div className="logo">
